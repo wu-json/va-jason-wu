@@ -2,7 +2,7 @@
   <div class="content">
     <div><img src="./images/profile.png" alt="profile" /></div>
     <div class="text-content">
-      <h1>jason wu</h1>
+      <h1 class="blue-gradient-text">jason wu</h1>
       <h2>voice actor (based in us)</h2>
     </div>
   </div>
