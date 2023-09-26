@@ -53,7 +53,6 @@
   @media only screen and (max-width: 1200px) {
     .content {
       flex-direction: column;
-      justify-content: center;
       max-width: 400px;
       padding: 30px;
       text-align: center;
