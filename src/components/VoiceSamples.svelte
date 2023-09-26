@@ -45,17 +45,26 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
+    min-width: 600px;
+    padding: 30px;
   }
   h1 {
     font-size: 60px;
-    margin: 0px;
   }
   .players {
-    padding: 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
+  }
+  @media only screen and (max-width: 1200px) {
+    .content {
+      width: calc(100% - 60px);
+      min-width: none;
+      max-width: none;
+    }
   }
 </style>
