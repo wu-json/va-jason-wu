@@ -63,8 +63,9 @@
   @media only screen and (max-width: 800px) {
     .content {
       width: calc(100% - 60px);
-      min-width: none;
-      max-width: none;
+      text-align: center;
+      min-width: auto;
+      max-width: auto;
     }
   }
 </style>
