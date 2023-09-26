@@ -33,4 +33,14 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
+  :global(.green-gradient-text) {
+    background-color: #00ff1a;
+    background-image: linear-gradient(45deg, #00ff1a, #04ffd2);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
 </style>
