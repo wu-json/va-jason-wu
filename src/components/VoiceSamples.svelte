@@ -60,7 +60,7 @@
     width: 100%;
     position: relative;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 800px) {
     .content {
       width: calc(100% - 60px);
       min-width: none;
