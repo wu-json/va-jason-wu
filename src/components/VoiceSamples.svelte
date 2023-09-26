@@ -7,9 +7,9 @@
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
       mutex: true,
+      theme: 'red',
       audio: [
         {
-          theme: '#ebd0c2',
           name: '君の知らない物語',
           artist: 'supercell',
           cover:
