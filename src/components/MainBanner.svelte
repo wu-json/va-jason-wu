@@ -36,6 +36,9 @@
   .text-content {
     margin: 20px;
   }
+  .text-content :global(button) {
+    margin-top: 10px;
+  }
   img {
     width: 180px;
     margin: 20px;
