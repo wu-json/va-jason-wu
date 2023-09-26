@@ -19,18 +19,18 @@
 
 <style>
   .wrapper {
+    position: relative;
     height: 100vh;
+    width: 100%;
     margin: 0px;
     padding: 0px;
-    width: 100%;
   }
   .content {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
     display: flex;
-    flex-direction: row;
     align-items: center;
   }
   .text-content {
@@ -49,5 +49,21 @@
   }
   h2 {
     margin: 10px 0px 0px 0px;
+  }
+  @media only screen and (max-width: 1200px) {
+    .content {
+      flex-direction: column;
+      justify-content: center;
+      max-width: 400px;
+      padding: 30px;
+      text-align: center;
+      transform: translate(-50% + 60px, -50%);
+      width: calc(100% - 60px);
+    }
+    img {
+      width: 100%;
+      max-width: 180px;
+      margin: 0px;
+    }
   }
 </style>
