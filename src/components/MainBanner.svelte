@@ -1,9 +1,6 @@
 <script>
+  import { goto } from '$app/navigation';
   import Button from './Button.svelte';
-
-  function contactMe() {
-    alert('hello');
-  }
 </script>
 
 <div class="wrapper">
@@ -12,7 +9,10 @@
     <div class="text-content">
       <h1 class="blue-gradient-text">jason wu</h1>
       <h2>voice actor (based in us)</h2>
-      <Button text="contact me" on:click={contactMe} />
+      <Button
+        text="contact me"
+        on:click={() => goto('mailto:jasonwuva@proton.me')}
+      />
     </div>
   </div>
 </div>
