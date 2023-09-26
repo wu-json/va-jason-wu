@@ -7,8 +7,9 @@
     margin: 0px;
   }
   .wrapper {
-    background-color: #1e1e1e;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
+    width: 100%;
   }
 </style>

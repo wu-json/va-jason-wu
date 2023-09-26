@@ -6,6 +6,7 @@
 
 <style>
   :global(body) {
+    background-color: #1e1e1e;
     margin: 0px;
   }
   :global(h1, h2, p) {
