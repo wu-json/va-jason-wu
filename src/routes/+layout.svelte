@@ -9,7 +9,7 @@
     background-color: #0c0b0b;
     margin: 0px;
   }
-  :global(h1, h2, p) {
+  :global(h1, h2, p, button) {
     font-family: 'Inter';
     color: #ffffff;
   }
