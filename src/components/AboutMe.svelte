@@ -39,4 +39,15 @@
     margin-top: 20px;
     width: 160px;
   }
+  @media only screen and (max-width: 1200px) {
+    .content {
+      padding: 30px;
+      width: calc(100% - 60px);
+    }
+    img {
+      width: 100%;
+      max-width: 180px;
+      margin: 0px;
+    }
+  }
 </style>
