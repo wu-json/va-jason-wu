@@ -1,6 +1,28 @@
+<script>
+  import 'aplayer/dist/APlayer.min.css';
+  import { onMount } from 'svelte';
+
+  onMount(async () => {
+    const { default: APlayer } = await import('aplayer');
+    const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      audio: [
+        {
+          name: '君の知らない物語',
+          artist: 'supercell',
+          cover:
+            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
+        },
+      ],
+    });
+  });
+</script>
+
 <div class="wrapper">
   <div class="content">
     <h1 class="green-gradient-text">voice samples</h1>
+    <div id="aplayer"></div>
   </div>
 </div>
 
