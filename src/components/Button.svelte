@@ -16,13 +16,15 @@
 
 <style>
   button {
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
     background: none;
+    border-radius: 10px;
+    border: solid 1px transparent;
     font-size: 16px;
     padding: 10px 20px;
-    border: solid 1px transparent;
-    border-radius: 10px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    position: relative;
+    z-index: 1;
   }
   button:hover {
     cursor: pointer;
@@ -32,8 +34,21 @@
     background-image: linear-gradient(#0c0b0b, #0c0b0b),
       radial-gradient(circle at top left, #0038ff, #22f2ff);
   }
-  .blue:hover {
+  .blue::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: linear-gradient(to right, #0038ff, #22f2ff),
       linear-gradient(to right, #0038ff, #22f2ff);
+    opacity: 0;
+    transition: opacity.3s ease-in-out;
+    border-radius: 10px;
+    z-index: -1;
+  }
+  .blue:hover:after {
+    opacity: 1;
   }
 </style>
