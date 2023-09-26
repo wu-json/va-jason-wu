@@ -1,14 +1,15 @@
 <script>
   import 'aplayer/dist/APlayer.min.css';
   import { onMount } from 'svelte';
+  import APlayer from 'aplayer?client';
 
   onMount(async () => {
-    const { default: APlayer } = await import('aplayer');
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
-      theme: '#0c0b0b',
+      mutex: true,
       audio: [
         {
+          theme: '#ebd0c2',
           name: '君の知らない物語',
           artist: 'supercell',
           cover:
