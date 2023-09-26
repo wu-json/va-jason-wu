@@ -6,6 +6,7 @@
       dubs. I have a deep bass-heavy voice and am able to voice characters in
       both English and Mandarin Chinese.
     </p>
+    <img src="./images/bocchi.png" alt="bocchi-in-trash" />
   </div>
 </div>
 
@@ -33,5 +34,9 @@
   }
   p {
     font-size: 18px;
+  }
+  img {
+    margin-top: 20px;
+    width: 160px;
   }
 </style>
