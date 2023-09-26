@@ -6,6 +6,7 @@
     const { default: APlayer } = await import('aplayer');
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
+      theme: '#0c0b0b',
       audio: [
         {
           name: '君の知らない物語',
@@ -22,7 +23,9 @@
 <div class="wrapper">
   <div class="content">
     <h1 class="green-gradient-text">voice samples</h1>
-    <div id="aplayer"></div>
+    <div class="players">
+      <div id="aplayer"></div>
+    </div>
   </div>
 </div>
 
@@ -47,5 +50,11 @@
   h1 {
     font-size: 60px;
     margin: 0px;
+  }
+  .players {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 </style>
