@@ -10,6 +10,6 @@ This is my voice acting portfolio website built with SvelteKit (my first SvelteK
 ### Running the App Locally
 
 ```bash
-pnpm i
-pnpm dev
+pnpm i # install dependencies
+pnpm dev # serve the app on localhost
 ```
