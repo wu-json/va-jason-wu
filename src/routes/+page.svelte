@@ -1,5 +1,5 @@
 <script>
-  import MainBanner from './MainBanner.svelte';
+  import MainBanner from 'src/components/MainBanner.svelte';
 </script>
 
 <MainBanner />
