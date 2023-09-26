@@ -23,4 +23,14 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
+  :global(.pink-gradient-text) {
+    background-color: #ff00f5;
+    background-image: linear-gradient(45deg, #ff00f5, #9104ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
 </style>
