@@ -1,9 +1,18 @@
+<script>
+  import Button from './Button.svelte';
+
+  function contactMe() {
+    alert('hello');
+  }
+</script>
+
 <div class="wrapper">
   <div class="content">
     <div><img src="./images/profile.png" alt="profile" /></div>
     <div class="text-content">
       <h1 class="blue-gradient-text">jason wu</h1>
       <h2>voice actor (based in us)</h2>
+      <Button text="contact me" on:click={contactMe} />
     </div>
   </div>
 </div>
