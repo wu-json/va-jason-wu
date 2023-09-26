@@ -34,7 +34,6 @@
   }
   .blue:hover {
     background-image: linear-gradient(to right, #0038ff, #22f2ff),
-      radial-gradient(circle at top left, #0038ff, #22f2ff);
-    color: #000;
+      linear-gradient(to right, #0038ff, #22f2ff);
   }
 </style>
