@@ -37,10 +37,10 @@
   .blue::after {
     position: absolute;
     content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
     background-image: linear-gradient(to right, #0038ff, #22f2ff),
       linear-gradient(to right, #0038ff, #22f2ff);
     opacity: 0;
