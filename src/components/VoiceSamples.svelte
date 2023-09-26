@@ -16,6 +16,20 @@
             'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
           url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
         },
+        {
+          name: '君の知らない物語',
+          artist: 'supercell',
+          cover:
+            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
+        },
+        {
+          name: '君の知らない物語',
+          artist: 'supercell',
+          cover:
+            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
+        },
       ],
     });
   });
