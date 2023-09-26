@@ -24,9 +24,17 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
+  button:hover {
+    cursor: pointer;
+  }
   .blue {
     box-shadow: 0px 0px 10px rgba(34, 242, 255, 0.7);
     background-image: linear-gradient(#0c0b0b, #0c0b0b),
       radial-gradient(circle at top left, #0038ff, #22f2ff);
+  }
+  .blue:hover {
+    background-image: linear-gradient(to right, #0038ff, #22f2ff),
+      radial-gradient(circle at top left, #0038ff, #22f2ff);
+    color: #000;
   }
 </style>
