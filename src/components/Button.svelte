@@ -16,13 +16,13 @@
 
 <style>
   button {
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
     background: none;
-    border-radius: 10px;
-    border: solid 1px transparent;
     font-size: 16px;
     padding: 10px 20px;
+    border: solid 1px transparent;
+    border-radius: 10px;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     position: relative;
     z-index: 1;
   }
