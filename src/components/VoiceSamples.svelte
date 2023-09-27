@@ -68,7 +68,6 @@
     font-size: 60px;
   }
   .players {
-    display: flex;
     flex-direction: column;
     width: 100%;
     position: relative;
