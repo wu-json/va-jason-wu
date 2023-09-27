@@ -1,52 +1,68 @@
-<script>
+<script lang="ts">
   import 'aplayer/dist/APlayer.min.css';
   import { onMount } from 'svelte';
   import APlayer from 'aplayer?client';
+  import ColorThief from 'colorthief';
 
   onMount(() => {
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
       mutex: true,
-      theme: 'red',
       audio: [
         {
-          'name': '光るなら',
-          'artist': 'Goose house',
-          'url': 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.mp3',
-          'lrc': 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.lrc',
-          'cover':
-            'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.jpg',
+          name: '光るなら',
+          artist: 'Goose house',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.mp3',
+          cover: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.jpg',
         },
         {
-          'name': '神奇的糊塗魔藥',
-          'artist': '林家謙',
-          'url':
-            'https://blog-static.fengkx.top/svelte-aplayer/margic-sillines.mp3',
-          'lrc':
-            'https://blog-static.fengkx.top/svelte-aplayer/margic-silliness.lrc',
-          'cover':
+          name: '神奇的糊塗魔藥',
+          artist: '林家謙',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/margic-sillines.mp3',
+          cover:
             'https://blog-static.fengkx.top/svelte-aplayer/margic-sillines.jpg',
         },
         {
-          'name': '君の知らない物語',
-          'artist': 'supercell',
-          'url':
-            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
-          'lrc':
-            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.lrc',
-          'cover':
+          name: '君の知らない物語',
+          artist: 'supercell',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
+          cover:
             'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
         },
         {
-          'name': '「戦場ヶ原、蕩れ」',
-          'artist': '神前暁',
-          'url':
-            'https://blog-static.fengkx.top/svelte-aplayer/senjougahara.mp3',
-          'cover':
+          name: '「戦場ヶ原、蕩れ」',
+          artist: '神前暁',
+          url: 'https://blog-static.fengkx.top/svelte-aplayer/senjougahara.mp3',
+          cover:
             'https://blog-static.fengkx.top/svelte-aplayer/senjougahara.jpg',
         },
       ],
     });
+
+    const colorThief = new ColorThief();
+    const image = new Image();
+    const xhr = new XMLHttpRequest();
+
+    const setTheme = ({ index }: { index: number }) => {
+      if (!ap.list.audios[index].theme) {
+        xhr.onload = function () {
+          let coverUrl = URL.createObjectURL(this.response);
+          image.onload = function () {
+            let color = colorThief.getColor(image);
+            ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+            URL.revokeObjectURL(coverUrl);
+          };
+          image.src = coverUrl;
+        };
+        xhr.open('GET', ap.list.audios[index].cover, true);
+        xhr.responseType = 'blob';
+        xhr.send();
+      }
+    };
+
+    setTheme({ index: ap.list.index });
+    ap.on('listswitch', setTheme);
+
     return () => {
       ap.destroy();
     };
@@ -84,6 +100,20 @@
   }
   #aplayer {
     width: 100%;
+    background-color: #1e2124;
+    color: #fff;
+  }
+  :global(.aplayer .aplayer-list ol li.aplayer-list-light) {
+    background: #000;
+  }
+  :global(.aplayer .aplayer-list ol li:hover) {
+    background: #000;
+  }
+  :global(.aplayer .aplayer-list ol li) {
+    border-top: 1px solid #36393e;
+  }
+  :global(.aplayer.aplayer-withlist .aplayer-info) {
+    border-bottom: 1px solid #36393e;
   }
   @media only screen and (max-width: 800px) {
     .content {
