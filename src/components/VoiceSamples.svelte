@@ -68,9 +68,7 @@
     font-size: 60px;
   }
   .players {
-    flex-direction: column;
     width: 100%;
-    position: relative;
   }
   @media only screen and (max-width: 800px) {
     .content {
