@@ -13,8 +13,7 @@
           name: '光るなら',
           artist: 'Goose house',
           url: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.mp3',
-          cover:
-            'https://static.vecteezy.com/system/resources/previews/004/447/761/non_2x/abstract-red-fluid-wave-background-free-vector.jpg',
+          cover: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.jpg',
         },
         {
           name: '神奇的糊塗魔藥',
