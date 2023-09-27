@@ -56,9 +56,7 @@
 <div class="wrapper">
   <div class="content">
     <h1 class="green-gradient-text">voice samples</h1>
-    <div class="players">
-      <div id="aplayer"></div>
-    </div>
+    <div id="aplayer"></div>
   </div>
 </div>
 
@@ -85,7 +83,7 @@
   h1 {
     font-size: 60px;
   }
-  .players {
+  #aplayer {
     width: 100%;
   }
   @media only screen and (max-width: 800px) {
