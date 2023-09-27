@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import APlayer from 'aplayer?client';
 
-  onMount(async () => {
+  onMount(() => {
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
       mutex: true,
@@ -47,15 +47,16 @@
         },
       ],
     });
+    return () => {
+      ap.destroy();
+    };
   });
 </script>
 
 <div class="wrapper">
   <div class="content">
     <h1 class="green-gradient-text">voice samples</h1>
-    <div class="players">
-      <div id="aplayer"></div>
-    </div>
+    <div id="aplayer"></div>
   </div>
 </div>
 
@@ -66,12 +67,11 @@
     width: 100%;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +82,7 @@
   h1 {
     font-size: 60px;
   }
-  .players {
+  #aplayer {
     width: 100%;
   }
   @media only screen and (max-width: 800px) {
