@@ -67,12 +67,11 @@
     width: 100%;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
