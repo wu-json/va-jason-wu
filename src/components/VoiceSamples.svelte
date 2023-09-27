@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import APlayer from 'aplayer?client';
 
-  onMount(async () => {
+  onMount(() => {
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
       mutex: true,
@@ -47,6 +47,9 @@
         },
       ],
     });
+    return () => {
+      ap.destroy();
+    };
   });
 </script>
 
