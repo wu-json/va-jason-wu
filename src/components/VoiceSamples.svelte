@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
   import 'aplayer/dist/APlayer.min.css';
   import { onMount } from 'svelte';
   import APlayer from 'aplayer?client';
+  import ColorThief from 'colorthief';
 
   onMount(() => {
     const ap = new APlayer({
       container: document.getElementById('aplayer'),
       mutex: true,
-      theme: 'red',
       audio: [
         {
           'name': '光るなら',
@@ -15,7 +15,7 @@
           'url': 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.mp3',
           'lrc': 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.lrc',
           'cover':
-            'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.jpg',
+            'https://static.vecteezy.com/system/resources/previews/004/447/761/non_2x/abstract-red-fluid-wave-background-free-vector.jpg',
         },
         {
           'name': '神奇的糊塗魔藥',
@@ -47,6 +47,31 @@
         },
       ],
     });
+
+    const colorThief = new ColorThief();
+    const image = new Image();
+    const xhr = new XMLHttpRequest();
+
+    const setTheme = ({ index }: { index: number }) => {
+      if (!ap.list.audios[index].theme) {
+        xhr.onload = function () {
+          let coverUrl = URL.createObjectURL(this.response);
+          image.onload = function () {
+            let color = colorThief.getColor(image);
+            ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+            URL.revokeObjectURL(coverUrl);
+          };
+          image.src = coverUrl;
+        };
+        xhr.open('GET', ap.list.audios[index].cover, true);
+        xhr.responseType = 'blob';
+        xhr.send();
+      }
+    };
+
+    setTheme({ index: ap.list.index });
+    ap.on('listswitch', setTheme);
+
     return () => {
       ap.destroy();
     };
