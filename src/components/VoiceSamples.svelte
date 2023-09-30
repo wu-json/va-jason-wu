@@ -28,13 +28,13 @@
           cover: './images/lad-russo.jpg',
         },
         {
-          name: 'Cyrus',
+          name: 'Cyrus Albright',
           artist: 'Octopath Traveler',
           url: './voice-chops/cyrus.wav',
           cover: './images/cyrus.jpg',
         },
         {
-          name: 'Toji',
+          name: 'Toji Fushiguro',
           artist: 'Jujutsu Kaisen',
           url: './voice-chops/toji.wav',
           cover: './images/toji.jpg',
