@@ -16,24 +16,28 @@
           cover: './images/vino.png',
         },
         {
+          name: 'Victor Talbot',
+          artist: 'Baccano!',
+          url: './voice-chops/victor-talbot.wav',
+          cover: './images/victor-talbot.jpg',
+        },
+        {
           name: 'Lad Russo',
           artist: 'Baccano!',
           url: './voice-chops/lad-russo.wav',
           cover: './images/lad-russo.jpg',
         },
         {
-          name: '君の知らない物語',
-          artist: 'supercell',
-          url: 'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.mp3',
-          cover:
-            'https://blog-static.fengkx.top/svelte-aplayer/bakemonogatari-ed.jpg',
+          name: 'Cyrus',
+          artist: 'Octopath Traveler',
+          url: './voice-chops/cyrus.wav',
+          cover: './images/cyrus.jpg',
         },
         {
-          name: '「戦場ヶ原、蕩れ」',
-          artist: '神前暁',
-          url: 'https://blog-static.fengkx.top/svelte-aplayer/senjougahara.mp3',
-          cover:
-            'https://blog-static.fengkx.top/svelte-aplayer/senjougahara.jpg',
+          name: 'Toji',
+          artist: 'Jujutsu Kaisen',
+          url: './voice-chops/toji.wav',
+          cover: './images/toji.jpg',
         },
       ],
     });
