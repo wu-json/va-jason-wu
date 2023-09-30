@@ -124,5 +124,8 @@
       min-width: auto;
       max-width: auto;
     }
+    .content h1 {
+      text-align: center;
+    }
   }
 </style>
