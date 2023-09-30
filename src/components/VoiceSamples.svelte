@@ -121,7 +121,6 @@
   @media only screen and (max-width: 800px) {
     .content {
       width: calc(100% - 60px);
-      text-align: center;
       min-width: auto;
       max-width: auto;
     }
