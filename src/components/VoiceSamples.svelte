@@ -16,10 +16,10 @@
           cover: './images/vino.png',
         },
         {
-          name: 'Victor Talbot',
-          artist: 'Baccano!',
-          url: './voice-chops/victor-talbot.wav',
-          cover: './images/victor-talbot.jpg',
+          name: 'Toji Fushiguro',
+          artist: 'Jujutsu Kaisen',
+          url: './voice-chops/toji.wav',
+          cover: './images/toji.png',
         },
         {
           name: 'Lad Russo',
@@ -28,16 +28,16 @@
           cover: './images/lad-russo.jpg',
         },
         {
+          name: 'Victor Talbot',
+          artist: 'Baccano!',
+          url: './voice-chops/victor-talbot.wav',
+          cover: './images/victor-talbot.png',
+        },
+        {
           name: 'Cyrus Albright',
           artist: 'Octopath Traveler',
           url: './voice-chops/cyrus.wav',
-          cover: './images/cyrus.jpg',
-        },
-        {
-          name: 'Toji Fushiguro',
-          artist: 'Jujutsu Kaisen',
-          url: './voice-chops/toji.wav',
-          cover: './images/toji.jpg',
+          cover: './images/cyrus.png',
         },
       ],
     });
