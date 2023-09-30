@@ -16,11 +16,10 @@
           cover: './images/vino.png',
         },
         {
-          name: '神奇的糊塗魔藥',
-          artist: '林家謙',
-          url: 'https://blog-static.fengkx.top/svelte-aplayer/margic-sillines.mp3',
-          cover:
-            'https://blog-static.fengkx.top/svelte-aplayer/margic-sillines.jpg',
+          name: 'Lad Russo',
+          artist: 'Baccano!',
+          url: './voice-chops/lad-russo.wav',
+          cover: './images/lad-russo.jpg',
         },
         {
           name: '君の知らない物語',
