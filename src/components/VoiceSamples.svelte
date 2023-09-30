@@ -10,10 +10,10 @@
       mutex: true,
       audio: [
         {
-          name: '光るなら',
-          artist: 'Goose house',
-          url: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.mp3',
-          cover: 'https://blog-static.fengkx.top/svelte-aplayer/hikarunara.jpg',
+          name: 'Claire Stanfield (Vino)',
+          artist: 'Baccano!',
+          url: './voice-chops/claire.wav',
+          cover: './images/vino.png',
         },
         {
           name: '神奇的糊塗魔藥',
